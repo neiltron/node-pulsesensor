@@ -6,12 +6,13 @@ var five = require("johnny-five"),
     http = require("http"),
     server = http.createServer(app),
     sio = require("socket.io").listen(server),
+    path = require('path'),
     d3 = require("d3"),
     board, sensor;
 
-app.use(express.static(__dirname + '/public'));
+app.use('/js', express.static( path.normalize( __dirname + '/../public/js')) );
 app.get('/', function (req, res) {
-  res.sendfile(__dirname + '/views/index.html');
+  res.sendfile( path.normalize( __dirname + "/../views/index.html") );
 });
 
 
