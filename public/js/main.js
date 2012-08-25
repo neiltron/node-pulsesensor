@@ -1,5 +1,5 @@
 $(function () {
-  var pulse = io.connect('http://nodepulse.dev/pulse');
+  var pulse = io.connect('http://localhost:8082/pulse');
   var pulse_data = [];
   pulse.on('pulse', function (data) {
     pulse_data.push(data)
