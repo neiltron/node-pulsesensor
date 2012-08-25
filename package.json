@@ -10,8 +10,6 @@
     "express": "3.x",
     "johnny-five": "*",
     "socket.io": "*",
-    "ejs": "*",
-    "d3": "*",
     "path": "*"
   }
 }
