@@ -2,7 +2,7 @@
   "name": "node-pulsesensor",
   "description": "node frontend to an arduino pulse sensor",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
   "scripts": {
     "start": "./bin/server"
   },
