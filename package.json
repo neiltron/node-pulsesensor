@@ -1,6 +1,11 @@
 {
   "name": "node-pulsesensor",
   "description": "node frontend to an arduino pulse sensor",
+  "author": "Neil Pullman <neil@descend.org> (http://github.com/neiltron)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neiltron/node-pulsesensor.git"
+  },
   "version": "0.0.1",
   "private": false,
   "scripts": {
