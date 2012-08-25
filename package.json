@@ -1,0 +1,16 @@
+{
+  "name": "node-pulse",
+  "description": "node frontend to an arduino pulse sensor",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "./bin/server"
+  },
+  "dependencies": {
+    "express": "3.x",
+    "johnny-five": "*",
+    "socket.io": "*",
+    "ejs": "*",
+    "d3": "*"
+  }
+}
