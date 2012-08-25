@@ -1,5 +1,5 @@
 # node-pulsesensor
-A browser front-end for an arduino [pulse sensor](http://pulsesensor.com/)
+A browser front-end for an arduino [pulse sensor](http://pulsesensor.com/) using johnny-five, express, socket.io, and flot.
 
 
 ## Usage
