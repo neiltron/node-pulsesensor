@@ -9,11 +9,7 @@ var five = require("johnny-five"),
     path = require('path'),
     board, sensor;
 
-app.use('/js', express.static( path.normalize( __dirname + '/../public/js')) );
-app.use('/css', express.static( path.normalize( __dirname + '/../public/css')) );
-app.get('/', function (req, res) {
-  res.sendfile( path.normalize( __dirname + "/../views/index.html") );
-});
+app.use('/', express.static( path.normalize( __dirname + '/../public')) );
 
 server.listen(8082);
 pulse = sio.of('/pulse');
@@ -38,8 +34,3 @@ board.on("ready", function() {
     pulse.emit('pulse', this.scaled);
   });
 });
-
-// Tutorials
-//
-// http://protolab.pbworks.com/w/page/19403657/TutorialSensors
-// http://www.dfrobot.com/wiki/index.php?title=Analog_Slide_Position_Sensor_(SKU:_DFR0053)
