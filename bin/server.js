@@ -16,18 +16,10 @@ pulse = sio.of('/pulse');
 
 board = new five.Board();
 board.on("ready", function() {
-
   // Create a new `sensor` hardware instance.
   sensor = new five.Sensor({
     pin: "A5",
     freq: 250
-  });
-
-  // Inject the `sensor` hardware into
-  // the Repl instance's context;
-  // allows direct command line access
-  board.repl.inject({
-    sensor: sensor
   });
 
   sensor.scale([ 0, 100 ]).on("read", function() {
