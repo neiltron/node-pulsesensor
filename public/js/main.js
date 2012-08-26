@@ -74,7 +74,10 @@ $(function () {
     plot = $.plot($("#placeholder"), [ parse_data() ], options);
   }
 
-  $('body').append('<div id="placeholder"></div>');
-  $('#placeholder').css({ height: $('body').height(), width: '100%' })
+  $('#placeholder').css({
+    width: '100%',
+    height: $('body').height() + 'px'
+  })
+
   setup(y_min, y_max);
 });
