@@ -10,12 +10,10 @@ var five = require("johnny-five"),
     board, sensor;
 
 app.use('/js', express.static( path.normalize( __dirname + '/../public/js')) );
+app.use('/css', express.static( path.normalize( __dirname + '/../public/css')) );
 app.get('/', function (req, res) {
   res.sendfile( path.normalize( __dirname + "/../views/index.html") );
 });
-
-
-
 
 server.listen(8082);
 pulse = sio.of('/pulse');
