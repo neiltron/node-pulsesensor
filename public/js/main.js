@@ -56,7 +56,6 @@ $(function () {
     plot = $.plot($("#placeholder"), [ parse_data() ], options);
   }
 
-  console.log($('body')[0].scrollHeight);
   $('body').append('<div id="placeholder"></div>');
   $('#placeholder').css({ height: $('body').height(), width: '100%' })
   setup(y_min, y_max);
