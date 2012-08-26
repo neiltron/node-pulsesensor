@@ -3,6 +3,9 @@ $(function () {
       pulse_data = [],
       plot,
       totalPoints = 100,
+      lastPeak = Date.now(),
+      peakDiffs = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      freq = 0,
       y_min = 20,
       y_max = 50;
 
@@ -12,6 +15,21 @@ $(function () {
 
     plot.setData([ parse_data() ]);
     plot.draw();
+
+    if (data < pulse_data[totalPoints - 2] - .2) {
+      freq = Date.now() - lastPeak;
+      lastPeak = Date.now();
+
+      peakDiffs.push(freq);
+      peakDiffs.shift();
+
+      var peak_sum = 0;
+      for (var i = 0; i < peakDiffs.length; i++) {
+        peak_sum += peakDiffs[i];
+      }
+      heart_rate = ((peak_sum / peakDiffs.length) / 1000) * 60;
+      console.log(heart_rate);
+    }
   });
 
   // pre-fill pulse_data with all zeroes
