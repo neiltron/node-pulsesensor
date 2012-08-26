@@ -1,5 +1,5 @@
 $(function () {
-  var pulse = io.connect('http://localhost:8082/pulse'),
+  var pulse = io.connect('/pulse'),
       pulse_data = [],
       plot,
       totalPoints = 100,
