@@ -3,3 +3,26 @@ body, html {
   margin: 0;
   height: 100%;
 }
+
+#heartrate_container {
+  position: absolute;
+  bottom: 25px;
+  padding: 20px;
+
+  background: #fdd;
+  opacity: .9;
+  font-size: 24pt;
+  font-weight: 100;
+  font-family: helvetica neue, arial, verdana, sans-serif;
+}
+
+  #heartrate_container span.heart {
+    display: block;
+    margin-right: 5px;
+    float: left;
+    position: relative;
+    top: 8pt;
+
+    color: #f77;
+    font-size: 12pt;
+  }
