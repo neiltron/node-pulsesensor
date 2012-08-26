@@ -11,5 +11,5 @@ Assuming your pulse sensor is [setup properly](http://pulsesensor.myshopify.com/
     open http://localhost:8082
 
 
-That will get your some Charlie Brown action like so:
+That will get you some Charlie Brown action like so:
 ![screenshot](https://github.com/neiltron/node-pulsesensor/raw/master/screenshot.png)
