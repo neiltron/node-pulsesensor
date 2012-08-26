@@ -2,7 +2,7 @@ $(function () {
   var pulse = io.connect('http://localhost:8082/pulse'),
       pulse_data = [],
       plot,
-      totalPoints = 50,
+      totalPoints = 100,
       y_min = 20,
       y_max = 50;
 
@@ -31,8 +31,8 @@ $(function () {
     }
 
     //reset graph center if line is outside min/max range
-    if (min - 5 < y_min || max + 5 > y_max) {
-      setup(min - 5, max + 5);
+    if (min - 10 < y_min || max + 5 > y_max) {
+      setup(min - 10, max + 5);
     }
 
     return res;
