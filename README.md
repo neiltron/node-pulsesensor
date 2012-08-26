@@ -13,3 +13,4 @@ Assuming your pulse sensor is [setup properly](http://pulsesensor.myshopify.com/
 
 That will get you some Charlie Brown action like so:
 ![screenshot](https://github.com/neiltron/node-pulsesensor/raw/master/screenshot.png)
+![iphone screenshot](https://github.com/neiltron/node-pulsesensor/raw/master/screenshot-iphone.png)
