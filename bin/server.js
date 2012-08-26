@@ -7,7 +7,6 @@ var five = require("johnny-five"),
     server = http.createServer(app),
     sio = require("socket.io").listen(server),
     path = require('path'),
-    d3 = require("d3"),
     board, sensor;
 
 app.use('/js', express.static( path.normalize( __dirname + '/../public/js')) );
