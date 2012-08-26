@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/neiltron/node-pulsesensor.git"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
   "scripts": {
     "start": "./bin/server"
