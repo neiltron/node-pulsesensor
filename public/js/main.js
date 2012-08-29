@@ -27,7 +27,7 @@ $(function () {
       for (var i = 0; i < peakDiffs.length; i++) {
         peak_sum += peakDiffs[i];
       }
-      heart_rate = parseInt(((peak_sum / peakDiffs.length) / 1000) * 60, 10);
+      heart_rate = parseInt(60 / ((peak_sum / peakDiffs.length) / 1000), 10);
       $('#heartrate').html(heart_rate);
     }
   });
