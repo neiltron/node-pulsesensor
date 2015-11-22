@@ -1,28 +1,24 @@
-//pulse.js
-
 var five = require("johnny-five"),
     express = require("express"),
     app = express(),
     http = require("http"),
-    server = http.createServer(app),
-    sio = require("socket.io").listen(server),
-    path = require('path'),
-    board, sensor;
+    server = require('http').Server(app);
+    io = require('socket.io')(server);
 
-app.use('/', express.static( path.normalize( __dirname + '/../public')) );
-
+app.use(express.static('public'));
 server.listen(8082);
-pulse = sio.of('/pulse');
 
-board = new five.Board();
-board.on("ready", function() {
-  // Create a new `sensor` hardware instance.
-  sensor = new five.Sensor({
-    pin: "A5",
-    freq: 250
-  });
+var board = new five.Board({port: '/dev/cu.usbmodem1411'});
 
-  sensor.scale([ 0, 100 ]).on("read", function() {
-    pulse.emit('pulse', this.scaled);
+io.on('connection', function(socket){
+  board.on("ready", function() {
+    var sensor = new five.Sensor({
+      pin: "A0",
+      freq: 250
+    });
+
+    sensor.scale([ 0, 100 ]).on("change", function() {
+      socket.emit('pulse', this.scaled)
+    });
   });
 });

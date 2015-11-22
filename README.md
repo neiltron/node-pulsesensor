@@ -7,6 +7,7 @@ Assuming your pulse sensor is [setup properly](http://pulsesensor.myshopify.com/
 
     git clone https://github.com/neiltron/node-pulsesensor.git
     cd node-pulsesensor
+    npm install
     node bin/server&
     open http://localhost:8082
 
