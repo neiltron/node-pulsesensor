@@ -1,5 +1,5 @@
 $(function () {
-  var pulse = io.connect('/pulse'),
+  var socket = io.connect('http://localhost:8082'),
       pulse_data = [],
       plot,
       totalPoints = 100,
@@ -9,7 +9,7 @@ $(function () {
       y_min = 20,
       y_max = 50;
 
-  pulse.on('pulse', function (data) {
+  socket.on('pulse', function (data) {
     pulse_data.push(data)
     pulse_data.shift();
 
