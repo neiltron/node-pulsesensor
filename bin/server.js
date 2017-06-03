@@ -7,7 +7,9 @@ var five = require("johnny-five"),
 
 app.use(express.static('public'));
 
-server.listen(8082);
+server.listen(8082, function() {
+  console.log("running on http://127.0.0.1:8082")
+});
 
 var board = new five.Board();
 

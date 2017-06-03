@@ -7,7 +7,7 @@ body, html {
 #heartrate_container {
   position: absolute;
   bottom: 25px;
-  padding: 20px;
+  padding: 10px;
 
   background: #fdd;
   opacity: .9;
@@ -16,13 +16,21 @@ body, html {
   font-family: helvetica neue, arial, verdana, sans-serif;
 }
 
-  #heartrate_container span.heart {
-    display: block;
-    margin-right: 5px;
-    float: left;
-    position: relative;
-    top: 8pt;
+#heartrate_container span.heart {
+  float: left;
+  position: relative;
+  transition: all 0.1s ease-in;
 
-    color: #f77;
-    font-size: 12pt;
-  }
+  color: #f77;
+  font-size: 22pt;
+}
+
+span.heart {
+   width: 50px;
+   height: 40px;
+   text-align: center;
+}
+
+#placeholder {
+  height: 100%;
+}
